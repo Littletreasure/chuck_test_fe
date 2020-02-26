@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+  background-color: #85c1e9;
+  min-height: 100vh;
+}
+
+.Header {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+  padding-top: 10px;
+  justify-content: flex-start;
+  font-size: 30px;
+  color: white;
+}
