@@ -15,7 +15,11 @@ class App extends Component {
       this.setState({ joke: joke, clicked: true });
     });
   };
-
+  handleSearchClick = (firstName, lastName) => {
+    api.getJoke(firstName, lastName).then(joke => {
+      this.setState({ joke: joke, clicked: true });
+    });
+  };
   render() {
     const { clicked, joke } = this.state;
     return (
@@ -24,7 +28,10 @@ class App extends Component {
         {clicked ? (
           <Joke joke={joke} />
         ) : (
-          <Buttons handleClick={this.handleClick} />
+          <Buttons
+            handleClick={this.handleClick}
+            handleSearchClick={this.handleSearchClick}
+          />
         )}
       </div>
     );

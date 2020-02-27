@@ -41,7 +41,7 @@ class Buttons extends Component {
             </div>
           </div>
         ) : (
-          <Search />
+          <Search handleSearchClick={this.props.handleSearchClick} />
         )}
       </div>
     );
