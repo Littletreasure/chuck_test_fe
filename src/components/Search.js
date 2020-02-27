@@ -36,7 +36,7 @@ class Search extends Component {
       <div>
         <div className="Form">
           <form onSubmit={this.handleSubmit}>
-            <label>
+            <label className="label">
               First Name:
               <input
                 type="text"
@@ -45,7 +45,7 @@ class Search extends Component {
                 onChange={this.handleChange}
               ></input>
             </label>
-            <label>
+            <label className="label">
               Last Name:
               <input
                 type="text"

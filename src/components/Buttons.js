@@ -18,11 +18,14 @@ class Buttons extends Component {
     this.setState({ clicked: false });
     this.props.handleHomeClick();
   };
+  onClickList = () => {
+    this.props.handleListClick();
+  };
   render() {
     return (
       <div className="Main">
         {!this.state.clicked ? (
-          <div>
+          <div className="ButtonList">
             <div className="Buttons">
               <p>Click here for a random joke</p>
               <button
@@ -41,6 +44,16 @@ class Buttons extends Component {
                 onClick={this.onClickSearch}
               >
                 Search
+              </button>
+            </div>
+            <div className="Buttons">
+              <p>Never-ending Joke List</p>
+              <button
+                className="Button"
+                type="submit"
+                onClick={this.onClickList}
+              >
+                List
               </button>
             </div>
           </div>

@@ -12,3 +12,12 @@ export const getJoke = (firstName, lastName) => {
       return response.data.value.joke;
     });
 };
+export const getJokeList = () => {
+  return axios
+    .get(
+      "http://api.icndb.com/jokes/random/10?exclude=[explicit]&&escape=javascript"
+    )
+    .then(response => {
+      return response.data.value;
+    });
+};
