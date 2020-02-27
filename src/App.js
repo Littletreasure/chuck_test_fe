@@ -20,17 +20,21 @@ class App extends Component {
       this.setState({ joke: joke, clicked: true });
     });
   };
+  handleHomeClick = () => {
+    this.setState({ clicked: false, joke: null });
+  };
   render() {
     const { clicked, joke } = this.state;
     return (
       <div className="App">
         <Header />
         {clicked ? (
-          <Joke joke={joke} />
+          <Joke joke={joke} handleHomeClick={this.handleHomeClick} />
         ) : (
           <Buttons
             handleClick={this.handleClick}
             handleSearchClick={this.handleSearchClick}
+            handleHomeClick={this.handleHomeClick}
           />
         )}
       </div>

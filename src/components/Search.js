@@ -26,31 +26,42 @@ class Search extends Component {
       this.props.handleSearchClick(firstName, lastName);
     }
   };
+  onHomeClick = () => {
+    this.setState({ firstName: "", lastName: "", error: false });
+    this.props.onHomeClick();
+  };
   render() {
     const { firstName, lastName, error } = this.state;
     return (
-      <div className="form">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            First Name:
-            <input
-              type="text"
-              id="first"
-              value={firstName}
-              onChange={this.handleChange}
-            ></input>
-          </label>
-          <label>
-            Last Name:
-            <input
-              type="text"
-              value={lastName}
-              onChange={this.handleChange}
-            ></input>
-          </label>
-          <button type="submit">Search</button>
-        </form>
-        {error ? <p>Please complete both fields</p> : null}
+      <div>
+        <div className="Form">
+          <form onSubmit={this.handleSubmit}>
+            <label>
+              First Name:
+              <input
+                type="text"
+                id="first"
+                value={firstName}
+                onChange={this.handleChange}
+              ></input>
+            </label>
+            <label>
+              Last Name:
+              <input
+                type="text"
+                value={lastName}
+                onChange={this.handleChange}
+              ></input>
+            </label>
+            <button type="submit">Search</button>
+          </form>
+          {error ? <p>Please complete both fields</p> : null}
+        </div>
+        <div>
+          <button className="Home" onClick={this.onHomeClick}>
+            Home
+          </button>
+        </div>
       </div>
     );
   }

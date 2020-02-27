@@ -14,6 +14,10 @@ class Buttons extends Component {
   onClickSearch = event => {
     this.setState({ clicked: true });
   };
+  onHomeClick = () => {
+    this.setState({ clicked: false });
+    this.props.handleHomeClick();
+  };
   render() {
     return (
       <div className="Main">
@@ -41,7 +45,10 @@ class Buttons extends Component {
             </div>
           </div>
         ) : (
-          <Search handleSearchClick={this.props.handleSearchClick} />
+          <Search
+            handleSearchClick={this.props.handleSearchClick}
+            onHomeClick={this.onHomeClick}
+          />
         )}
       </div>
     );
