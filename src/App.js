@@ -3,46 +3,41 @@ import "./styles/App.css";
 import Header from "./components/Header";
 import Buttons from "./components/Buttons";
 import Joke from "./components/Joke";
+import JokeList from "./components/JokeList";
 import * as api from "./utils/api";
 import chuck from "./chuck-norris.jpg";
 
 class App extends Component {
   state = {
-    clicked: false,
+    singleJoke: false,
     joke: null,
-    jokes: [],
-    list: null
+    jokeList: false
   };
   handleClick = () => {
     api.getJoke().then(joke => {
-      this.setState({ joke: joke, clicked: true });
+      this.setState({ joke: joke, singleJoke: true });
     });
   };
   handleSearchClick = (firstName, lastName) => {
     api.getJoke(firstName, lastName).then(joke => {
-      this.setState({ joke: joke, clicked: true, list: false });
+      this.setState({ joke: joke, singleJoke: true, jokeList: false });
     });
   };
   handleHomeClick = () => {
-    this.setState({ clicked: false, joke: null, jokes: [], list: null });
+    this.setState({ singleJoke: false, joke: null, jokeList: false });
   };
   handleListClick = () => {
-    api.getJokeList().then(jokes => {
-      this.setState({ jokes: jokes, clicked: true, list: true });
-    });
+    this.setState({ singleJoke: false, jokeList: true });
   };
   render() {
-    const { clicked, joke, jokes, list } = this.state;
+    const { singleJoke, joke, jokeList } = this.state;
     return (
       <div className="App">
         <Header />
-        {clicked ? (
-          <Joke
-            joke={joke}
-            handleHomeClick={this.handleHomeClick}
-            jokes={jokes}
-            list={list}
-          />
+        {singleJoke ? (
+          <Joke joke={joke} handleHomeClick={this.handleHomeClick} />
+        ) : jokeList ? (
+          <JokeList handleHomeClick={this.handleHomeClick} />
         ) : (
           <Buttons
             handleClick={this.handleClick}
@@ -51,7 +46,7 @@ class App extends Component {
             handleListClick={this.handleListClick}
           />
         )}
-        {list ? null : (
+        {jokeList ? null : (
           <div className="Image">
             <img src={chuck} alt="chuck" width="180" />
           </div>
