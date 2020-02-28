@@ -53,7 +53,9 @@ class Search extends Component {
                 onChange={this.handleChange}
               ></input>
             </label>
-            <button type="submit">Search</button>
+            <button className="button" type="submit">
+              Search
+            </button>
           </form>
           {error ? <p>Please complete both fields</p> : null}
         </div>

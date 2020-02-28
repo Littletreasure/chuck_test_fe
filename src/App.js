@@ -47,8 +47,8 @@ class App extends Component {
           />
         )}
         {jokeList ? null : (
-          <div className="Image">
-            <img src={chuck} alt="chuck" width="180" />
+          <div className="ImageDiv">
+            <img className="Image" src={chuck} alt="chuck" width="180" />
           </div>
         )}
       </div>

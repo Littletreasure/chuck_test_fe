@@ -1,6 +1,14 @@
 .Joke {
   font-size: 20px;
-  min-height: 60vh;
+  min-height: 55vh;
   margin-left: 20px;
   margin-right: 20px;
+  color: black;
+}
+.button {
+  height: 20px;
+  background-color: white;
+  border-color: #046ab8;
+  color: #046ab8;
+  font-weight: bold;
 }

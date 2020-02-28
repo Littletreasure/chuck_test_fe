@@ -27,7 +27,7 @@ class Buttons extends Component {
         {!this.state.clicked ? (
           <div className="ButtonList">
             <div className="Buttons">
-              <p>Click here for a random joke</p>
+              <p className="text">Click here for a random joke</p>
               <button
                 className="Button"
                 type="submit"
@@ -37,7 +37,7 @@ class Buttons extends Component {
               </button>
             </div>
             <div className="Buttons">
-              <p>Click here to customize the name</p>
+              <p className="text">Click here to customize the name</p>
               <button
                 className="Button"
                 type="submit"
@@ -47,7 +47,7 @@ class Buttons extends Component {
               </button>
             </div>
             <div className="Buttons">
-              <p>Never-ending Joke List</p>
+              <p className="text">Never-ending Joke List</p>
               <button
                 className="Button"
                 type="submit"

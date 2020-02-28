@@ -10,7 +10,9 @@ class Joke extends Component {
       <div className="Joke">
         <p>{this.props.joke}</p>
 
-        <button onClick={this.onClick}>Home</button>
+        <button className="button" onClick={this.onClick}>
+          Home
+        </button>
       </div>
     );
   }

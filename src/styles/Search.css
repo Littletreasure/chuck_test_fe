@@ -1,9 +1,21 @@
 .Home {
   margin-top: 30px;
+  height: 20px;
+  background-color: white;
+  border-color: #046ab8;
+  color: #046ab8;
+  font-weight: bold;
 }
 .Form {
   padding-top: 10px;
 }
 .label {
   margin-right: 10px;
+}
+.button {
+  height: 20px;
+  background-color: white;
+  border-color: #046ab8;
+  color: #046ab8;
+  font-weight: bold;
 }

@@ -3,8 +3,8 @@ import "../styles/App.css";
 
 const Header = () => {
   return (
-    <header>
-      <h1 className="Header">Chuck Norris Jokes</h1>
+    <header className="Header">
+      <h1>Chuck Norris Jokes</h1>
     </header>
   );
 };
