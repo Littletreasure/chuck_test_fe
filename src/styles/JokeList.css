@@ -12,8 +12,10 @@
   height: 20px;
   background-color: white;
   border-color: #046ab8;
+  border-radius: 8px;
   color: #046ab8;
   font-weight: bold;
+  font-size: 12px;
 }
 
 .joke:nth-child(even) {

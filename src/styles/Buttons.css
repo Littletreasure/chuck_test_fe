@@ -16,9 +16,11 @@
   height: 20px;
   margin-left: 10px;
   border-color: #046ab8;
+  border-radius: 8px;
   color: #046ab8;
   background-color: white;
   font-weight: bold;
+  font-size: 12px;
 }
 .ButtonList {
   display: flex;
@@ -27,4 +29,5 @@
 }
 .text {
   color: black;
+  font-size: 20px;
 }
