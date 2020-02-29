@@ -3,12 +3,24 @@ import * as api from "./api";
 describe("getJoke", () => {
   it("returns data containing the word 'Chuck'", () => {
     const actual = api.getJoke();
-    return expect(actual).resolves.toContain("Chuck");
+    return actual.then(data => {
+      expect(data).toContain("Chuck");
+    });
   });
 });
 describe("getJoke('Ruth', 'Sargent)", () => {
   it("returns data containing the word 'Ruth'", () => {
     const actual = api.getJoke("Ruth", "Sargent");
-    return expect(actual).resolves.toContain("Ruth");
+    return actual.then(data => {
+      expect(data).toContain("Ruth");
+    });
+  });
+});
+describe("getJokeList", () => {
+  it("returns an array of 20 jokes", () => {
+    const actual = api.getJokeList();
+    return actual.then(data => {
+      expect(data.length).toBe(20);
+    });
   });
 });
