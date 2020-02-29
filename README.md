@@ -1,12 +1,12 @@
-Chuck Norris Joke App
+## Chuck Norris Joke App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-#Getting Started#
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-#Setup Instructions#
+## Setup Instructions
 
 Clone this repository to your local machine and cd into it:
 
