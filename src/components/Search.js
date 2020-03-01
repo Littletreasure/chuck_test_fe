@@ -34,8 +34,8 @@ class Search extends Component {
     const { firstName, lastName, error } = this.state;
     return (
       <div>
-        <div className="Form">
-          <form onSubmit={this.handleSubmit}>
+        <div className="FormMain">
+          <form onSubmit={this.handleSubmit} className="form">
             <label className="label">
               First Name:
               <input
@@ -49,11 +49,12 @@ class Search extends Component {
               Last Name:
               <input
                 type="text"
+                id="last"
                 value={lastName}
                 onChange={this.handleChange}
               ></input>
             </label>
-            <button className="button" type="submit">
+            <button className="SearchButton" type="submit">
               Search
             </button>
           </form>

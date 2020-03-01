@@ -15,12 +15,12 @@ class App extends Component {
   };
   handleClick = () => {
     api.getJoke().then(joke => {
-      this.setState({ joke: joke, singleJoke: true });
+      this.setState({ joke, singleJoke: true });
     });
   };
   handleSearchClick = (firstName, lastName) => {
     api.getJoke(firstName, lastName).then(joke => {
-      this.setState({ joke: joke, singleJoke: true, jokeList: false });
+      this.setState({ joke, singleJoke: true, jokeList: false });
     });
   };
   handleHomeClick = () => {

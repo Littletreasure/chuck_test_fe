@@ -14,7 +14,7 @@ class JokeList extends Component {
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
     api.getJokeList().then(jokes => {
-      this.setState({ jokes: jokes });
+      this.setState({ jokes });
     });
   }
   componentWillUnmount() {
@@ -44,8 +44,8 @@ class JokeList extends Component {
         </div>
         {jokes.map(joke => {
           return (
-            <p className="joke" key={joke.id}>
-              - {joke.joke}
+            <p className="joke" key={Math.random()}>
+              {joke.joke}
             </p>
           );
         })}

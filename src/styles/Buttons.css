@@ -4,12 +4,12 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 55vh;
+  margin-top: 10px;
 }
 .Buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 10px;
 }
 
 .Button {

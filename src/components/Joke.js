@@ -1,21 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import "../styles/Joke.css";
 
-class Joke extends Component {
-  onClick = () => {
-    this.props.handleHomeClick();
+const Joke = props => {
+  const onClick = () => {
+    props.handleHomeClick();
   };
-  render() {
-    return (
-      <div className="Joke">
-        <p>{this.props.joke}</p>
-
-        <button className="button" onClick={this.onClick}>
-          Home
-        </button>
-      </div>
-    );
-  }
-}
+  return (
+    <div className="Joke">
+      <p>{props.joke}</p>
+      <button className="button" onClick={onClick}>
+        Home
+      </button>
+    </div>
+  );
+};
 
 export default Joke;
