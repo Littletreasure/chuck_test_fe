@@ -7,11 +7,11 @@ class Buttons extends Component {
     clicked: false
   };
 
-  onClickRand = event => {
+  onClickRand = () => {
     this.props.handleClick();
   };
 
-  onClickSearch = event => {
+  onClickSearch = () => {
     this.setState({ clicked: true });
   };
   onHomeClick = () => {
