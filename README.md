@@ -14,6 +14,10 @@ Clone this repository to your local machine and cd into it:
 
 \$ cd chuck_test_fe
 
-Make sure you've navigated into the folder and install all dependencies using npm install. To run the project locally type npm start. To run the tests type npm test.
+Install all dependencies using npm install.
+
+\$ npm install
+
+To run the project locally type npm start. To run the tests type npm test.
 
 You will also need nodeJS version 12.7.0.
