@@ -38,7 +38,7 @@ class JokeList extends Component {
     return (
       <div className="Jokes" onScroll={this.handleScroll}>
         <div>
-          <button className="button" onClick={this.onHomeClick}>
+          <button className="HomeButton" onClick={this.onHomeClick}>
             Home
           </button>
         </div>

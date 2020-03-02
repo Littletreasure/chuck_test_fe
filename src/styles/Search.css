@@ -1,5 +1,5 @@
-.Home {
-  margin-top: 30px;
+.HomeButton {
+  margin: 30px;
   height: 20px;
   background-color: white;
   border-color: #046ab8;
@@ -10,9 +10,10 @@
 }
 .FormMain {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1em;
 }
 .label {
   margin-right: 10px;
@@ -27,6 +28,7 @@
   font-weight: bold;
   font-size: 12px;
 }
-.form {
-  margin-top: 1em;
+.error {
+  color: red;
+  font-size: 20px;
 }
