@@ -44,7 +44,7 @@ class JokeList extends Component {
         </div>
         {jokes.map(joke => {
           return (
-            <p className="joke" key={Math.random()}>
+            <p className="joke" key={joke.id + Math.random()}>
               {joke.joke}
             </p>
           );

@@ -7,7 +7,6 @@
   min-height: 100vh;
   min-width: 100vw;
 }
-
 .Header {
   display: flex;
   flex-direction: row;
@@ -20,7 +19,6 @@
   border-bottom-style: solid;
   border-color: #0494cd;
 }
-
 .Back {
   margin-top: 20px;
 }
@@ -32,6 +30,5 @@
   margin-bottom: 10px;
 }
 .Image {
-  box-shadow: 0 4px 8px 0 #0494cd, 0 6px 20px 0 #0494cd;
+  box-shadow: 0 2px 4px 0 #046ab8, 0 8px 20px 0 #0494cd;
 }
-/* #0494CD #046ab8 #002663 */
